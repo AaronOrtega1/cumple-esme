@@ -1,13 +1,13 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import NavBar from "./components/NavBar";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'App para mi novia',
-  description: 'Una pequeña app que hice para mi novia',
+  title: "App para mi novia",
+  description: "Una pequeña app que hice para mi novia",
 };
 
 export default function RootLayout({
@@ -25,5 +25,3 @@ export default function RootLayout({
   );
 }
 
-function Navbar() {
-  return }
