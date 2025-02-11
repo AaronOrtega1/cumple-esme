@@ -1,40 +1,41 @@
-import Image from "next/image";
+import PolaroidImage from "../components/PolaroidImage";
 
 export default function Gallery() {
   return (
-    <div className="container mx-auto p-4 flex flex-col items-center">
-      <h1 className="text-2xl font-bold">Nuestra Galería</h1>
-      <div className="grid grid-cols-3 gap-4 mt-4">
-        <Image
-          src="/public/MyLove/"
-          alt="1"
-          width={300}
-          height={300}
-          className="rounded-lg"
+    <div className="flex flex-col items-center min-h-screen py-2">
+      <h1 className="text-2xl font-bold pt-2">Nuestra Galería</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+        <PolaroidImage
+          src="/MyLove/Antro.jpg"
+          alt="Noche en el antro"
+          date="26/10/2024"
         />
-        <Image
-          src="/public/MyLove/"
-          alt="2"
-          width={300}
-          height={300}
-          className="rounded-lg"
+        <PolaroidImage
+          src="/MyLove/Espejito.jpg"
+          alt="Foto en espejo"
+          date="27/07/2023"
         />
-        <Image
-          src="/public/MyLove/"
-          alt="3"
-          width={300}
-          height={300}
-          className="rounded-lg"
+        <PolaroidImage
+          src="/MyLove/Mazamitla.jpg"
+          alt="Viaje a Mazamitla"
+          date="05/10/2024"
         />
-        <Image
-          src="/public/MyLove/"
-          alt="4"
-          width={300}
-          height={300}
-          className="rounded-lg"
+        <PolaroidImage
+          src="/MyLove/Millonario.jpg"
+          alt="El concurso Millonario"
+          date="01/07/2024"
+        />
+        <PolaroidImage
+          src="/MyLove/X-mas.jpg"
+          alt="Primera navidad juntos"
+          date="03/12/2024"
+        />
+        <PolaroidImage
+          src="/MyLove/tapalpa.jpg"
+          alt="Viaje a Tapalpa"
+          date="18/01/2025"
         />
       </div>
     </div>
   );
 }
-
