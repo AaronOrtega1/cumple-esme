@@ -131,23 +131,13 @@ const photos = [
   },
 ];
 
-// Generamos rutas estáticas para mejorar el rendimiento
-export function generateStaticParams() {
-  return photos.map((photo) => ({
-    id: photo.id.toString(),
-  }));
-}
+type Params = Promise<{ id:string }>
 
-// Definir tipos de props
-type PageProps = {
-  params?: { id?: string };
-};
-
-export default function PhotoDetail({ params }: PageProps) {
-  if (!params || !params.id) {
-    return <div className="text-center text-red-500 mt-10 text-xl">⚠️ Parámetros no disponibles</div>;
-  }
-  const photo = photos.find((p) => p.id === String(params.id));
+export default async function PhotoDetail(props: { params: Params }) {
+  const params = await props.params;
+  const photoID = await params.id;
+  // Convertimos params.id a string para evitar errores
+  const photo = photos.find((p) => p.id === String(photoID));
 
   if (!photo) {
     return <div className="text-center text-red-500 mt-10 text-xl">📸 Foto no encontrada</div>;
