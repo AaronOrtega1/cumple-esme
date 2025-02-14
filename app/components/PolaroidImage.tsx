@@ -16,7 +16,7 @@ export default function PolaroidImage({
 }: PolaroidImageProps) {
   return (
     <Link href={`/gallery/${id}`}>
-      <div className="bg-white p-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 cursor-pointer">
+      <div className="bg-white p-4 rounded-lg shadow-2xl shadow-slate-400 transform transition-transform hover:scale-105 cursor-pointer">
         <div className="w-64 h-64 relative">
           <Image
             src={src}
