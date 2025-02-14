@@ -24,17 +24,17 @@ export default function NavBar() {
               Galería
             </Link>
           </li>
-          <li className="hidden">
+          <li>
             <Link href="/flowers" className="text-white hover:text-gray-200">
               Flores
             </Link>
           </li>
-          <li className="hidden">
+          <li>
             <Link href="/letter" className="text-white hover:text-gray-200">
               Carta
             </Link>
           </li>
-          <li className="hidden">
+          <li>
             <Link href="/notify" className="text-white hover:text-gray-200">
               Notificación
             </Link>
@@ -49,7 +49,7 @@ export default function NavBar() {
 
           {/* Dropdown Menu Mobile */}
           {menuOpen && (
-            <div className="absolute right-0 mt-2 w-40 bg-blue-500 rounded shadow-lg">
+            <div className="absolute right-0 mt-2 w-40 bg-blue-500 rounded shadow-lg z-50">
               <ul className="text-white">
                 <li>
                   <Link
@@ -60,7 +60,7 @@ export default function NavBar() {
                     Galería
                   </Link>
                 </li>
-                <li className="hidden">
+                <li >
                   <Link
                     href="/flowers"
                     className="block px-4 py-2"
@@ -69,7 +69,7 @@ export default function NavBar() {
                     Flores
                   </Link>
                 </li>
-                <li className="hidden">
+                <li>
                   <Link
                     href="/letter"
                     className="block px-4 py-2"
@@ -78,7 +78,7 @@ export default function NavBar() {
                     Cartita
                   </Link>
                 </li>
-                <li className="hidden">
+                <li>
                   <Link
                     href="/notify"
                     className="block px-4 py-2"
