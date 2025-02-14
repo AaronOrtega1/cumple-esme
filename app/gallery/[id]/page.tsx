@@ -132,19 +132,21 @@ const photos = [
 ];
 
 // Generamos rutas estáticas para mejorar el rendimiento
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return photos.map((photo) => ({
-    id: photo.id.toString(), // Asegurar que es un string
+    id: photo.id.toString(),
   }));
 }
 
 // Definir tipos de props
 type PageProps = {
-  params: { id: string };
+  params?: { id?: string };
 };
 
 export default function PhotoDetail({ params }: PageProps) {
-  // Convertimos params.id a string para evitar errores
+  if (!params || !params.id) {
+    return <div className="text-center text-red-500 mt-10 text-xl">⚠️ Parámetros no disponibles</div>;
+  }
   const photo = photos.find((p) => p.id === String(params.id));
 
   if (!photo) {
