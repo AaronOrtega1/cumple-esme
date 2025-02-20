@@ -1,3 +1,5 @@
+import Heart from "./components/Heart";
+
 export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center py-8">
@@ -6,9 +8,7 @@ export default function Home() {
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <div className="relative w-64 h-64">
             {/* Animación de corazón */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="heart animate-heartbeat"></div>
-            </div>
+            <Heart/>
           </div>
         </div>
 
